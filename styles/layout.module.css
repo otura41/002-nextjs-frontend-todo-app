@@ -1,0 +1,68 @@
+.layout {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 2rem;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.layout {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 2rem;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+/* Estilos para la lista de tareas */
+.mainInputContainer {
+    margin-bottom: 1rem;
+}
+
+.mainInput {
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+.filters {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.filterBtn {
+    padding: 0.5rem 1rem;
+    border: none;
+    background: #eee;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.filterActive {
+    background: #0070f3;
+    color: #fff;
+}
+
+.completedText {
+    text-decoration: line-through;
+    color: #aaa;
+}
