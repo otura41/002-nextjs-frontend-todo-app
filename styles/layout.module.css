@@ -1,16 +1,48 @@
-.layout {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 2rem;
-    background: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+/* Botón para generar poema */
+.generatePoemBtn {
+    margin-left: 0.5rem;
+    background: #e0e7ff;
+    color: #222;
+    border: none;
+    cursor: pointer;
+    font-size: 0.9rem;
+    border-radius: 4px;
+    padding: 0.2rem 0.7rem;
+    transition: background 0.2s;
 }
 
-.title {
-    text-align: center;
-    font-size: 2rem;
-    margin-bottom: 1rem;
+.generatePoemBtn:hover {
+    background: #c7d2fe;
+}
+
+/* Ventana emergente del poema */
+.poemBox {
+    position: absolute;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    z-index: 100;
+    top: 2.5rem;
+    left: 2rem;
+    min-width: 200px;
+}
+
+.closeButton {
+    position: absolute;
+    top: 0.3rem;
+    right: 0.7rem;
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    color: #888;
+}
+
+.poem {
+    margin-top: 1.5rem;
+    white-space: pre-line;
 }
 
 .layout {
@@ -65,4 +97,50 @@
 .completedText {
     text-decoration: line-through;
     color: #aaa;
+}
+
+.todoItem {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #eee;
+}
+
+/* --- Responsive para móviles --- */
+@media (max-width: 600px) {
+    .layout {
+        padding: 1rem;
+        max-width: 100vw;
+    }
+
+    .todoItem {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0.7rem 0.2rem;
+    }
+
+    .todoItem input[type="checkbox"] {
+        margin-bottom: 0.5rem;
+    }
+
+    .generatePoemBtn,
+    .deleteBtn {
+        width: 100%;
+        margin: 0.3rem 0 0 0;
+        font-size: 1rem;
+    }
+
+    .poemBox {
+        left: 0;
+        right: 0;
+        min-width: unset;
+        width: 95vw;
+        max-width: 95vw;
+        top: 3.5rem;
+        padding: 1rem 0.5rem;
+    }
+
+    .poem {
+        font-size: 1rem;
+    }
 }
