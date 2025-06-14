@@ -75,7 +75,7 @@ export default function Todo({ todo, onDelete, onChange }) {
     }
 
     return (
-        <li className={styles.todoItem} style={{ display: 'flex', alignItems: 'center', position: 'relative' }}>
+        <li className={styles.todoItem} style={{ position: 'relative' }}>
             <input
                 type="checkbox"
                 name="completed"
@@ -97,7 +97,7 @@ export default function Todo({ todo, onDelete, onChange }) {
             >
                 {todo.name}
             </span>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginLeft: 'auto' }}>
+            <div className={styles.actions}>
                 <button
                     className={styles.generatePoemBtn}
                     onClick={() => generatePoem(todo.id)}
